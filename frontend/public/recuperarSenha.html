@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>recuperarASenha</title>
+	<style type="text/css">
+		:root {
+			--cor-fundo-body: #ffae1a;
+			--cor-fundo-form: #FFFAFA;
+			--cor-borda: #D3D3D3;
+			--cor-texto: #2F4F4F;
+			--cor-fundo-btn-hover: #ffa500;
+		}
+		body {
+			margin: 0 auto;
+			background-color: var(--cor-fundo-body);
+			font-family: "Arial", Tahoma, arial;
+			color: var(--cor-texto);
+		}
+		img {
+			width: 100px;
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		section {
+			display: flex;
+			justify-content: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		form {
+			width: 420px;
+			border-radius: 5px;
+			background-color: var(--cor-fundo-form);
+		}
+		form header {
+			text-align: center;
+			padding: 10px;
+		}
+		.input-texto {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 15px;
+			flex-direction: column;
+			width: 80%;
+		}
+		.input {
+			padding: 10px;
+			border-radius: 5px;
+			border-style: solid;
+			border-color: var(--cor-borda);
+			outline: none;
+		}
+		hr {
+			border-color: var(--cor-fundo-body);
+			border-radius: 10px;
+			opacity: 0.7;
+		}
+		.inline {
+			display: inline-block;
+
+		}
+
+		.btn {
+			width: 49.3%;
+		}
+
+		.btn-enviar {
+			background-color: var(--cor-fundo-body);
+			color: var(--cor-fundo-form);
+			border-color: var(--cor-fundo-btn-hover);
+		}
+
+		.btn-enviar:hover {
+			background-color: black;
+		}
+
+		.btn:hover {
+			background-color: var(--cor-fundo-btn-hover);
+			color: var(--cor-fundo-form);
+			border-color: var(--cor-fundo-btn-hover);
+			transition-duration: 0.1s;
+		}
+		.margin-80 {
+			clear: both;
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-bottom: 55px;
+			padding: 14px;
+		}
+		.align-left {
+			float: left;
+		}
+		.align-right {
+			float: right;
+		}
+		a {
+			margin-top: 12px;
+			text-decoration: none;
+			font-style: none;
+		}
+		a:hover {
+			opacity: 0.7;
+		}
+		a:active {
+			color: var(--cor-fundo-body);
+		}
+		meter {
+			width: 100%;
+		}
+		.desc {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<section>
+			<form>
+				<header>
+					<a href="login.html">
+						<img src="logo8.png">
+					</a>
+					<p>Área de recuperação de senha</p>
+					<hr/>
+				</header>
+				<div class="margin-80 desc">
+					<span>Para prosseguir por favor digite seu email no campo abaixo que enviaremos as instrucões para recuperação da sua senha</span>
+				</div>
+				<input type="text" name="email" placeholder="Email" class="input input-texto">
+				<div class="margin-80">
+					<a href="login.html" class="align-left">Voltar</a>
+					<input type="submit" name="cadastrar" class="btn input btn-enviar align-right" value="Enviar">
+				</div>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
