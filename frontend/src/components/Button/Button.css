@@ -1,0 +1,28 @@
+.input {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--cor-borda);
+    outline: none;
+}
+.btn {
+    width: 49.3%;
+}
+  
+.btn-enviar {
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-fundo-form);
+    border-color: var(--cor-fundo-btn-hover);
+}
+  
+.btn-enviar:hover {
+    background-color: black;
+}
+  
+.btn:hover {
+    background-color: var(--cor-fundo-btn-hover);
+    color: var(--cor-fundo-form);
+    border-color: var(--cor-fundo-btn-hover);
+    transition-duration: 0.1s;
+    opacity: 0.8;
+}

@@ -7,6 +7,7 @@ import "./styles.css";
 
 export default function Register() {
   const [nome, setName] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpf, setCpf] = useState("");
@@ -18,7 +19,7 @@ export default function Register() {
   async function handleRegister(e) {
     e.preventDefault();
 
-    const data = { nome, email, password, cpf, user_validado, user_cuidador };
+    const data = { nome, telefone, email, password, cpf, user_validado, user_cuidador };
 
     try {
       const response = await api.post("user/create", data);
@@ -30,44 +31,27 @@ export default function Register() {
   }
 
   return (
-    <div className="register-container">
-      <div className="content">
-        <section>
-          <h1>Cadastro</h1>
-          <p>Faça seu Cadastro, para entrar na comunidade PetParty!</p>
-          <Link className="backlink" to="/">
-            <FiArrowLeft size={16} color="#e02041 " />
-            Não Tenho Cadastro
-          </Link>
-        </section>
-
+    <main>
+      <section>
         <form onSubmit={handleRegister}>
-          <input
-            placeholder="Nome Completo"
-            value={nome}
-            onChange={e => setName(e.target.value)}
-          />
-          <input
-            placeholder="Email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input
-            placeholder="Senha"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-          <input
-            placeholder="CPF"
-            value={cpf}
-            onChange={e => setCpf(e.target.value)}
-          />
-
-          <button className="button" type="submit">
-            Cadastrar
-          </button>
+          <header>
+            <a href={"/"}>
+              <img src="logo8.png"/>
+            </a>
+            <p>Área de cadastro</p>
+            <hr/>
+          </header>
+          <input type="text" name="nome" placeholder="Nome Completo" value={nome} onChange={e => setName(e.target.value)} className="input input-texto"/>
+          <input type="text" name="telefone" placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} className="input input-texto"/>
+          <input type="text" name="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} className="input input-texto"/>
+          <input type="password" name="senha" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)} className="input input-texto"/>
+          <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" value={cpf} onChange={e => setCpf(e.target.value)} className="input input-texto"/>
+          <div className="margin-80">
+            <a href={"/"} className="align-left">Já possui cadastro?</a>
+            <input type="submit" name="cadastrar" className="btn input btn-enviar align-right" value="Cadastrar"/>
+          </div>
         </form>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
